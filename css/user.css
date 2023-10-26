@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  padding: 25px 0 0 0;
+  grid-gap: 30px;
+  max-width: 1200px;
+  margin-bottom: 30px;
+  margin-left: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 570px;
+}
+/* menuleft */
+.menuleft {
+  position: relative;
+  width: 400px;
+  height: 520px;
+  background: transparent;
+  border: 2px solid rgba(235, 224, 224, 0.5);
+  border-radius: 20px;
+  backdrop-filter: sepia(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 20px;
+  margin-left: 10px;
+}
+.menuleft h2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  box-sizing: border-box;
+  height: max-content;
+  max-width: 100%;
+  width: fit-content;
+  padding: 3px 0;
+}
+
+.menuleft h2 i {
+  color: #000;
+  opacity: 0.3;
+  margin: 0 0 2px 0;
+}
+
+.menuleft h2 a {
+  color: #023f88;
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 10px;
+}
+
+.menuleft h2 a:before {
+  content: "|";
+  color: #000;
+  opacity: 0.3;
+  font-size: 17px;
+  margin-right: 10px;
+}
+
+.menuleft h2 span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+  display: block;
+}
+
+.menuleft ul {
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+}
+
+.menuleft ul li a {
+  padding: 12px 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menuleft .btn-logout {
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 31px;
+  color: black;
+  border: 1px solid black;
+}
+.menuleft .btn-logout:hover {
+  background: black;
+  color: #fff;
+}
+.menuleft ul li.active a,
+.menuleft ul li a:hover {
+  background: #e4e7ed;
+  border-radius: 4px;
+}
+.menuleft ul li.active a i.iconoh-menulisting,
+.menuleft ul li a:hover i.iconoh-menulisting {
+  background-position: -456px -23px;
+  width: 23px;
+  height: 19px;
+}
+
+.menuleft ul li.active a i.iconoh-menuprofile,
+.menuleft ul li a:hover i.iconoh-menuprofile {
+  background-position: -455px -65px;
+  width: 24px;
+  height: 19px;
+}
+/* end menuleft */
+
+/* menuright */
+.menuright {
+  width: 740px;
+  height: 520px;
+  margin-left: 90px;
+  position: relative;
+  background: transparent;
+  border: 2px solid rgba(235, 224, 224, 0.5);
+  border-radius: 20px;
+  backdrop-filter: sepia(1);
+}
+.menuright h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 19px;
+  box-sizing: border-box;
+  height: max-content;
+  max-width: 100%;
+  width: fit-content;
+  padding: 8px 0;
+  margin-left: 10px;
+}
+.profile .profile-area {
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px;
+}
+.profile .profile-area h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.profile .address-area {
+  border-radius: 4px;
+  background-color: #fff;
+  margin: 20px 0 25px 0;
+  height: auto;
+}
+.profile .profile_main .profile-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+.profile .profile-area div span {
+  font-size: 14px;
+  cursor: pointer;
+}
+.profile .profile-area .profile_main .btn-profile-edit {
+  display: none;
+  justify-content: center;
+  gap: 30px;
+}
+.profile .address .address-detail a i,
+.profile #profile-edit i {
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px 5px 0 0;
+}
+
+.profile .profile-area .profile_main .btn-profile-edit a {
+  color: #000;
+  font-weight: 400;
+}
+.profile .profile_main .profile-info p {
+  display: inline;
+}
+.profile .profile_main .profile-info .pl-span a {
+  margin-left: 10px;
+}
+
+.profile .profile-input-group {
+  /* display: none; */
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  background: #f5f5f5;
+  gap: 10px;
+  border: 1px solid #f5f5f5;
+}
+
+.profile .profile-area div span i {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1px 5px 10px 0;
+  border: 1px solid #ccc;
+  width: 16px;
+  height: 16px;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.profile .profile-area div span.active i {
+  border-color: #000;
+}
+.profile .profile-area div span.active i:before {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  height: 100%;
+  background-color: black;
+}
+
+.profile .profile-area .profile-input {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.profile .profile-input-group div span:first-child {
+  margin-right: 10px;
+}
+.profile input {
+  padding: 0 10px;
+  height: 40px;
+  line-height: 35px;
+  width: 60%;
+  border-radius: 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  text-transform: capitalize;
+  border-radius: 10px;
+}
+.profile .profile_main .texterror {
+  margin-top: 5px;
+}
+
+.profile .address-area {
+  background: #fff;
+  border-radius: 4px;
+  padding: 10px;
+}
+.profile .address-area h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.profile .address-area form {
+  padding: 0;
+  position: relative;
+  border-bottom: none;
+}
+.profile .address-area form select {
+  width: 49%;
+  margin: 0 0 10px 0;
+  padding: 0 15px 0 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  height: 38px;
+  border-radius: 10px;
+}
+.profile .address-area input {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.profile .address-area form input {
+  width: 49%;
+  height: 36px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.profile a.button {
+  width: 300px;
+  margin: 25px auto 15px auto;
+  display: block;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* end menuright */
